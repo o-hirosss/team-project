@@ -1,9 +1,40 @@
-.sidebar{
-    float: left;
-    width: 20%;
+body {
+    display: flex;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
-
-.content{
-    float: right;
-    width: 80%;
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    height: 100vh; /* Full height */
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: auto; /* Enables scroll in case of overflow */
+}
+.sidebar .menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar .menu li {
+    padding: 15px;
+    border-bottom: 1px solid #444;
+}
+.sidebar .menu li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+.sidebar .menu li a:hover {
+    background-color: #575757;
+}
+.content {
+    margin-left: 250px; /* Adjust based on sidebar width */
+    padding: 20px;
+    flex-grow: 1;
+}
+h1 {
+    color: #333;
 }
